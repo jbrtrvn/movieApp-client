@@ -11,7 +11,7 @@ import Logout from "./pages/Logout";
 import AddMovie from "./components/AddMovie";
 import DeleteMovie from "./components/DeleteMovie";
 import CommentsList from "./components/CommentsList";
-import UpdateMovie from "./components/UpdateMovie";
+import ManageMovie from "./components/ManageMovie";  
 
 function App() {
   const [user, setUser] = useState({ id: null, isAdmin: false });
@@ -55,8 +55,8 @@ function App() {
             <Route path="/movies/:id" element={<MovieDetails />} />
             <Route path="/add-movie" element={<AddMovie />} />
             <Route path="/deleteMovie" element={<DeleteMovie />} />
-            <Route path="/update-movie/:id" element={<UpdateMovie />} />
-            <Route path="/movies/:id/comments" element={<CommentsList />} />
+            <Route path="/update-movie/:id" element={<ManageMovie />} />
+            <Route path="/comments/:id" element={<CommentsList />} />
           </Routes>
         </Container>
       </Router>
